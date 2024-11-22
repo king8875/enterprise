@@ -94,9 +94,12 @@
 
 .showcase-sec .showcase__main{
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     left: 50%;
     top: 50%;
-    max-width: 600px;
+    width: 100%;
     padding: 32px;
     font-size: 24px;
     font-weight: 600;
@@ -897,12 +900,19 @@
 .creater-sec .creater__inner{
     position: sticky;
     top: 0;
+    height: 100vh;
     width: 100%;
 }
 .creater-sec .creater__img{
     position: relative;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
+}
+.creater-sec .creater__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .creater-sec .creater__intro{
     position: absolute;
@@ -1090,26 +1100,18 @@
 
 
 @media (max-width:720px) {
-    .intro-text .intro-text-item {
-        font-size: 32px;
-    }
-    .intro-text .intro-text-item:nth-child(4){
-        font-size: 18px;
-    }
-    .challenge-sec .left{
-        font-size: 42px;
-        font-weight: 700;
-    }
-    .challenge-sec .right{
-        font-size: 14px;
-    }
-    .gallery-content .gallery-title{
-        font-size: 32px;
-    }
-    .service__container{
-        display: flex;
-        flex-direction: column;
-    }
+    .intro-text .intro-text-item { font-size: 32px; }
+    .intro-text .intro-text-item:nth-child(4){ font-size: 18px; }
+
+
+    .showcase-sec .showcase__intro--inner{ font-size: 60px; }
+
+    .showcase-sec .showcase__main{ font-size: 20px; }
+    .feature-sec .feature__title{ font-size: 30px; }
+    .challenge-sec .left{ font-size: 42px; font-weight: 700; }
+    .challenge-sec .right{ font-size: 14px; }
+    .gallery-content .gallery-title{ font-size: 32px; }
+    .service__container{ display: flex; flex-direction: column; }
     .service-sec .service-wrapper{ padding: 0 }
     #serviceArea2 .service__main--title { display: none; }
     .service__main--area{ padding: 100vh 20px 100vh 20px; }
@@ -1163,4 +1165,13 @@
         color: #fff;
         opacity: 0;
     }
+
+    .creater-sec .creater__intro{ left: 100px; }
+    .prove-text{ font-size: 42px; }
+
+    .ground-sec{ padding: 0 50px; background: #fff; }
+    .ground-sec .ground__content .ground__content--title{ font-size: 62px; }
+    .ground-sec .ground__content .ground__content--subtitle{ font-size: 14px; }
+    .ground-sec .ground__content .ground__content--btn{ flex-direction: column; }
+
 }

@@ -195,15 +195,9 @@ const titleScroll03 = gsap.timeline({
     }
 });
 
-titleScroll03.to(".slide03__item", {
-    xPercent: (index) => -100 * index,
-});
-titleScroll03.to(".slide03__list", {
-    justifyContent: "flex-start",  
-},"<");
-titleScroll03.to(".service__slide03-wrap .right", {
-    opacity:1, 
-});
+titleScroll03.to(".slide03__item", { xPercent: (index) => -110 * index, });
+titleScroll03.to(".service__slide03-wrap .right", { opacity:1, });
+titleScroll03.to('slide03__item',{autoAlpha:0});
 ScrollTrigger.create({
     trigger: "#serviceArea3",
     start:"0% 0%",
@@ -231,6 +225,31 @@ mm.add("(max-width: 720px)", () => {
     });
     mobileScroll03.to(".slide03__item", {
         yPercent: (index) => -100 * index,
+    });
+
+    const titleScroll03 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".service__slide03", 
+            start: "0% 0%",
+            end:"100% 100%",
+            scrub: 0,  
+        }
+    });
+    
+    titleScroll03.to(".slide03__item", { yPercent: (index) => -110 * index, });
+    titleScroll03.to(".service__slide03-wrap .right", { opacity:1, });
+    ScrollTrigger.create({
+        trigger: "#serviceArea3",
+        start:"0% 0%",
+        end:"100% 50%",
+        onEnter:function(){
+            gsap.set('#serviceArea2 .service__main--title',{autoAlpha:0})
+            gsap.set('#serviceArea3 .first_card',{autoAlpha:1})
+        },
+        onLeaveBack:function(){
+            gsap.set('#serviceArea2 .service__main--title',{autoAlpha:1})
+            gsap.set('#serviceArea3 .first_card',{autoAlpha:0})
+        }
     });
 });
 
@@ -299,17 +318,11 @@ const creater = gsap.timeline({
     scrollTrigger: {
         trigger: ".creater-sec",
         start: "0% 0%",
-        end: "150% 100%",
-        scrub: true,
+        end: "50% 50%",
+        scrub: 0,
     }
 });
-
-creater.to('.creater__intro', {
-    opacity: 1,
-})
-creater.to('.creater__intro', {
-    opacity: 0,
-})
+creater.to('.creater__intro', { opacity: 1, })
 
 gsap.to(".creater__slide-inner", {
 
@@ -317,7 +330,8 @@ gsap.to(".creater__slide-inner", {
         trigger: ".creater__slide",
         start: "0% 0%",
         end:"100% 100%",
-        scrub: true,
+        scrub: 0,
+        invalidateOnRefresh:true,
     },
     xPercent:-100,
     x:function(){
