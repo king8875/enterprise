@@ -39,13 +39,8 @@ section{ position: relative; }
     justify-content: space-between;
     align-items: center;
 }
-.header-container .header__item{
-    display: flex;
-    align-items: center;
-}
-.header-container .header__item:last-child{
-    margin-left: 30px;
-}
+.header-container .header__item{ display: flex; align-items: center; }
+.header-container .header__item:last-child{ margin-left: 30px; }
 .header-container .header__item a{
     display: inline-block;
     padding: 23px 25px;
@@ -60,19 +55,9 @@ section{ position: relative; }
     font-weight: 600;
     line-height: 1;
 }
-.kr--left--icon path{
-    stroke: #fff;
-    transition: .3s;
-}
-.kr--right--icon path{
-    stroke: #fff;
-    transition: .3s;
-}
-
-
-.header__list .header__item:last-child{
-    position: relative;
-}
+.kr--left--icon path{ stroke: #fff; transition: .3s; }
+.kr--right--icon path{ stroke: #fff; transition: .3s; }
+.header__list .header__item:last-child{ position: relative; }
 .header__lang-dropdown{ display: none; }
 .header__lang-dropdown.active{ display: block; }
 .header__lang-dropdown-inner{
@@ -88,8 +73,6 @@ section{ position: relative; }
     font-size: 18px;
     background: rgba(0, 0, 0, 0.4);
 }
-
-
 .header__hamburger{
     display: none;
     padding: 21px 3px;
@@ -112,9 +95,6 @@ section{ position: relative; }
 .header__hamburger--item.top{ top: 0; width: 12px; }
 .header__hamburger--item.mid{ top: 50%; transform: translateY(-50%); }
 .header__hamburger--item.bot{ bottom: 0; }
-
-
-
 .header__sidemenu{
     position: absolute;
     top: 0;bottom: 0;right: 0;left: 0;
@@ -129,20 +109,9 @@ section{ position: relative; }
     padding: 50px;
     color: #000;
 }
-.header__sidemenu--item{
-    display: flex;
-    gap: 10px;
-}
-.header__sidemenu--item a{
-    font-weight: bold;
-    font-size: 35px;
-}
-.header__sidemenu--list .header__sidemenu--item:last-child a:last-child{
-    color: silver;
-}
-
-
-
+.header__sidemenu--item{ display: flex; gap: 10px; }
+.header__sidemenu--item a{ font-weight: bold; font-size: 35px; }
+.header__sidemenu--list .header__sidemenu--item:last-child a:last-child{ color: silver; }
 
 @media (max-width:720px) {
     .header-container .header__list {

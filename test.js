@@ -7,14 +7,10 @@ gsap.ticker.add((time) => {
 });
 gsap.ticker.lagSmoothing(0);
 
-
-
 // header js
 $('.header__list .header__item:last-child').on('click', function(){
     $('.header__lang-dropdown').toggleClass('active');
 });
-
-
 //intro gsap
 const intro = gsap.timeline({
     scrollTrigger: {

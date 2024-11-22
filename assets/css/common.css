@@ -27,19 +27,10 @@
     border: 2px solid #fff;
     background: #000;
 }
-.section-inner{
-    position: relative;
-    margin: 0 100px;
-}
-
-body.dark{
-    background: #000;
-    transition: .3s;
-}
+.section-inner{ position: relative; margin: 0 100px; }
+body.dark{ background: #000; transition: .3s; }
 
 @media (max-width:720px) {
-    .section-inner{
-        margin: 0;
-    }
-    
+    .section-inner{ margin: 0; }
+  
 }
