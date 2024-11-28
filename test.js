@@ -81,8 +81,6 @@ const tl4 = gsap.timeline({
 });
 tl4.from('.prove-sec01 .prove-text',{x:0})
 tl4.from('.prove-sec01 .pr-block',{'--x':1},"<")
-
-
 ScrollTrigger.create({
     trigger: `[data-dark="true"]`,
     start:"0% 50%",
@@ -91,10 +89,9 @@ ScrollTrigger.create({
         targets:"body",
         className:"dark"
     },
-})
+});
 
-
-// //possibility gsap
+//possibility gsap
 gsap.to(".possibility-sec .slider__inner", {
     scrollTrigger: {
         trigger: ".possibility-sec",
@@ -120,7 +117,7 @@ const tl5 = gsap.timeline({
 });
 tl5.to('.feature__item', {
     transform: "translateX(0%)",
-})
+});
 
 const tl5_1 = gsap.timeline({
     scrollTrigger: {
@@ -138,7 +135,7 @@ const tl5_1 = gsap.timeline({
 });
 tl5_1.to('.feature__title', {
     opacity: 1,
-})
+});
 
 const titleScroll = gsap.timeline({
     scrollTrigger: {
@@ -364,32 +361,6 @@ mm.add("(max-width: 720px)", () => {
             scrub: 0,
         },
     });
-    mobileScroll03.to(".slide03__item", {
-        yPercent: (index) => -100 * index,
-    });
-
-    const titleScroll03 = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".service__slide03", 
-            start: "0% 0%",
-            end:"100% 100%",
-            scrub: 0,  
-        }
-    });
-    
-    titleScroll03.to(".slide03__item", { yPercent: (index) => -110 * index, });
-    titleScroll03.to(".service__slide03-wrap .right", { opacity:1, });
-    ScrollTrigger.create({
-        trigger: "#serviceArea3",
-        start:"0% 0%",
-        end:"100% 50%",
-        onEnter:function(){
-            gsap.set('#serviceArea2 .service__main--title',{autoAlpha:0})
-            gsap.set('#serviceArea3 .first_card',{autoAlpha:1})
-        },
-        onLeaveBack:function(){
-            gsap.set('#serviceArea2 .service__main--title',{autoAlpha:1})
-            gsap.set('#serviceArea3 .first_card',{autoAlpha:0})
-        }
-    });
+  
+    mobileScroll03.to(".service__slide03-wrap .right", { opacity:1, });
 });

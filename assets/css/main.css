@@ -654,10 +654,15 @@
     align-items: center;
 }
 .slide03__inner .slide03__list{
-    width: 100%;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    gap: 20px;
+}
+.slide03__inner .slide03__list .slide03__item{
+    position: relative;
+    max-width: 400px;
+    min-width: 400px;
 }
 .slide03__item img{
     position: absolute;
