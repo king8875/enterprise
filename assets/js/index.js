@@ -154,33 +154,9 @@ ScrollTrigger.create({
     }
 });
 
-const titleScroll03 = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".service__slide03", 
-        start: "0% 0%",
-        end:"100% 100%",
-        scrub: 0,  
-    }
-});
 
-titleScroll03.to(".slide03__item", { xPercent: (index) => -105 * index, });
-titleScroll03.to(".service__slide03-wrap .right", { opacity:1, });
-titleScroll03.to('slide03__item',{autoAlpha:0});
 
-gsap.set('#serviceArea3 .first_card',{autoAlpha:0});
-ScrollTrigger.create({
-    trigger: "#serviceArea3",
-    start:"0% 0%",
-    end:"100% 50%",
-    onEnter:function(){
-        gsap.set('#serviceArea2 .service__main--title',{autoAlpha:0})
-        gsap.set('#serviceArea3 .first_card',{autoAlpha:1})
-    },
-    onLeaveBack:function(){
-        gsap.set('#serviceArea2 .service__main--title',{autoAlpha:1})
-        gsap.set('#serviceArea3 .first_card',{autoAlpha:0})
-    }
-});
+
 
 
 ScrollTrigger.create({
@@ -207,24 +183,7 @@ tl6.from('.prove-sec02 .prove-text',{x:0})
 tl6.from('.prove-sec02 .pr-block',{'--x':1},"<")
 
 
-//slide01 gsap
-gsap.to(".slide01 .slide01__inner", {
-    scrollTrigger: {
-        trigger: ".slide01",
-        start: "0% 0%",
-        end:"100% 100%",
-        scrub: true,
-        invalidateOnRefresh:true,
-        toggleClass:{
-            targets:".slide01 .slide01__down",
-            className: "show"
-        },
-    },
-    xPercent:-100,
-    x: function(){
-        return (window.innerWidth - 160);
-    }
-});
+
 
 const slide01 = gsap.timeline({
     scrollTrigger:{
@@ -333,6 +292,18 @@ const mm = gsap.matchMedia();
 
 mm.add("(min-width: 769px)", function(){
     //possibility gsap
+    const titleScroll03 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".service__slide03", 
+            start: "0% 0%",
+            end:"100% 100%",
+            scrub: 0,  
+        }
+    });
+    titleScroll03.to(".slide03__item", { xPercent: (index) => -105 * index, });
+    titleScroll03.to(".service__slide03-wrap .right", { opacity:1, });
+    titleScroll03.to('slide03__item',{autoAlpha:0});
+
     gsap.to(".possibility-sec .slider__inner", {
         scrollTrigger: {
             trigger: ".possibility-sec",
@@ -344,6 +315,39 @@ mm.add("(min-width: 769px)", function(){
         xPercent:-100,
         x: function(){
             return window.innerWidth - 160;
+        }
+    });
+    //servicearea3
+    gsap.set('#serviceArea3 .first_card',{autoAlpha:0});
+    ScrollTrigger.create({
+        trigger: "#serviceArea3",
+        start:"0% 0%",
+        end:"100% 50%",
+        onEnter:function(){
+            gsap.set('#serviceArea2 .service__main--title',{autoAlpha:0})
+            gsap.set('#serviceArea3 .first_card',{autoAlpha:1})
+        },
+        onLeaveBack:function(){
+            gsap.set('#serviceArea2 .service__main--title',{autoAlpha:1})
+            gsap.set('#serviceArea3 .first_card',{autoAlpha:0})
+        }
+    });
+    //slide01 gsap
+    gsap.to(".slide01 .slide01__inner", {
+        scrollTrigger: {
+            trigger: ".slide01",
+            start: "0% 0%",
+            end:"100% 100%",
+            scrub: true,
+            invalidateOnRefresh:true,
+            toggleClass:{
+                targets:".slide01 .slide01__down",
+                className: "show"
+            },
+        },
+        xPercent:-100,
+        x: function(){
+            return (window.innerWidth - 160);
         }
     });
 })
@@ -361,7 +365,7 @@ mm.add("(max-width: 768px)", () => {
             scrub: 0,
         },
     });
-  
+    mobileScroll03.to(".slide03__item", { yPercent: (index) => -105 * index,});
     mobileScroll03.to(".service__slide03-wrap .right", { opacity:1, });
 
 
@@ -400,4 +404,25 @@ mm.add("(max-width: 768px)", () => {
     });
     titleScroll.to(".icon-card-img",0.5, { autoAlpha:0 },'b-=1');
     titleScroll.to(".icon-card-img-active",0.5, { autoAlpha: 1 },'b-=0.7');
+
+
+
+    //slide01 gsap
+    gsap.to(".slide01 .slide01__inner", {
+        scrollTrigger: {
+            trigger: ".slide01",
+            start: "0% 0%",
+            end:"100% 100%",
+            scrub: true,
+            invalidateOnRefresh:true,
+            toggleClass:{
+                targets:".slide01 .slide01__down",
+                className: "show"
+            },
+        },
+        xPercent:-100,
+        x: function(){
+            return (window.innerWidth - 70);
+        }
+    });
 });

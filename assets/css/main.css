@@ -43,9 +43,7 @@
     transform: translateX(-50%);
     transition: opacity .5s;
 }
-.intro__ic-scrolldown.hide{
-    opacity: 0 ;
-}
+.intro__ic-scrolldown.hide{ opacity: 0 ; }
 
 /* showcase css */
 .showcase-sec{
@@ -181,7 +179,6 @@
 .prove-sec.prove-sec02 .prove-text:nth-child(3){transform: translateX(120%);}
 
 /* gallery-sec */
-.gallery-sec{}
 .gallery-container{ position: relative; }
 .gallery-content{ display: flex; height: 300vh;}
 .gallery-content .gallery-title{
@@ -359,10 +356,7 @@
 
 .challenge-sec.v2{ color: #fff; }
 
-
 /* feature sec */
-
-.feature-sec{}
 .feature-sec .feature__content{
     display: flex;
     height: 175px;
@@ -413,7 +407,6 @@
 /* service-sec */
 
 /* serviceArea1 */
-.service-sec{}
 .service-sec .service-wrapper{ padding: 0 100px; }
 .service-sec .service__inner{ height: 500vh; }
 .service-sec .service__inner .sticky-inner{ height: 600vh; }
@@ -456,15 +449,9 @@
     transform: translate(-50%, -50%);
     width: 150px;
 }
-.card__item-box-icon .icon-card-img{
-    opacity: 1;
-}
-.card__item-box-icon .icon-card-img-active{
-    opacity: 0;
-}
-.service-sec .service__inner .card__item:nth-child(4){
-    z-index: 1;
-}
+.card__item-box-icon .icon-card-img{ opacity: 1; }
+.card__item-box-icon .icon-card-img-active{ opacity: 0; }
+.service-sec .service__inner .card__item:nth-child(4){ z-index: 1; }
 .service-sec .card__item-head-title{
     font-size: 50px;
     font-weight: 600;
@@ -662,9 +649,7 @@
 .slide03__item:nth-child(3){z-index: 2;}
 .slide03__item:nth-child(4){z-index: 1;}
 
-.card__head{
-    flex: .5;
-}
+.card__head{ flex: .5; }
 .card__head--title{
     position: relative;
     display: flex;
@@ -710,7 +695,6 @@
     height: 40px;
     background: url(../images/card_icon.png) no-repeat 50% / cover;
 }
-
 .service__slide03-wrap .right{
     position: absolute;
     top: 50%;
@@ -725,7 +709,6 @@
 
 
 /* //slide01 sec */
-.slide01{}
 .slide01__wrap{ height: 300vh; padding: 0 100px; }
 .slide01 .slide01__inner{
     position: sticky;
@@ -750,9 +733,7 @@
     display: flex;
     gap: 50px;
 }
-.slide01__wrap .slide01__body .card__item01:nth-child(1){
-    background: #e657af;
-}
+.slide01__wrap .slide01__body .card__item01:nth-child(1){ background: #e657af; }
 .slide01__wrap .slide01__body .card__item01:nth-child(2){background: #0049ff;}
 .slide01__wrap .slide01__body .card__item01:nth-child(3){
     position: relative;
@@ -778,7 +759,6 @@
     padding: 34px;
     color: #fff;
     border-radius: 20px;
-
 }
 .slide01__wrap .slide01__body .card__item01::before{
     position: absolute;
@@ -885,7 +865,6 @@
 
 
 /* creator css */
-.creater-sec{}
 .creater-sec .creater__content{ height: calc(var(--full-height, 100vh) * 2.2); }
 .creater-sec .creater__inner{
     position: sticky;
@@ -923,7 +902,6 @@
     line-height: 1.67;
     font-weight: 600;
 }
-
 .creater__slide .creater__wrapper{ height: 300vh; padding: 0 100px; }
 .creater__slide-inner{
     position: sticky;
@@ -1012,8 +990,6 @@
     font-weight: 700;
 }
 
-
-
 /* ground sec */
 .ground-sec{ padding: 0 100px; background: #fff; }
 .ground-sec .ground__container{ padding: 200px 0; }
@@ -1069,7 +1045,6 @@
 .banner__inner .banner__item:nth-child(3n-2){ background: #00bf41; }
 .banner__inner .banner__item:nth-child(3n){ background: #e657af; }
 
-
 /* footer area */
 .footer{
     position: relative;
@@ -1087,8 +1062,6 @@
 .foot__right img{ width: 193px; }
 
 
-
-
 @media (max-width:768px) {
     .intro-text .intro-text-item { font-size: 40px; padding: 0; }
     .intro-text .intro-text-item:nth-child(4){ font-size: 28px; }
@@ -1098,8 +1071,17 @@
 
     .showcase-sec .showcase__main{ font-size: 20px; }
     .feature-sec .feature__title{ font-size: 30px; }
-    .challenge-sec .left{ font-size: 42px; font-weight: 700; }
-    .challenge-sec .right{ font-size: 14px; }
+    .challenge-sec .left{ 
+        text-align: center;
+        font-size: 40px; 
+        font-weight: 700; 
+    }
+    .challenge-sec .right{         
+        text-align: center;
+        font-size: 14px; 
+        justify-content: center;
+    }
+  
     .gallery-content .gallery-img{
         position: absolute;
         top: 0;
@@ -1112,7 +1094,10 @@
 
     .service__main--area .service__content--title{ font-size: 35px; }
     .service__main--area .service__content--content{ font-size: 14px; }
-
+    .service__slide--title{
+        text-align: center;
+        font-size: 50px;
+    }
     .service__content--info .service__content--info-item{
         display: flex;
         flex-direction: column;
@@ -1120,22 +1105,22 @@
         align-items: center;
     }
     .service__content--info-item .info-box{ width: 100%; flex: 1; }
+    .service__content--info-item .info-title{ font-size: 20px; }
     .service__item p{ font-size: 14px; }
     .slide03__list .first_card{display: none;}
     .ser__body .card__item{ 
         transform: scale(0.8);
         background: #000; 
     }
-
-
     .service__slide03-wrap{
         position: sticky;
         top: 50%;
         height: 100vh;
         display: flex;
         align-items: center;
+        justify-content: center;
         margin-top: 0vh;
-        padding-left: 50px;
+        padding-left: 10px;
     }
     .slide03__inner{
         width: 100%;
@@ -1163,18 +1148,21 @@
         color: #fff;
         opacity: 0;
     }
-
-    .creater-sec .creater__intro{ left: 100px; }
+    .creater-sec .creater__intro{ 
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        
+    }
     .prove-text{ font-size: 42px; }
 
+    .ground-sec .ground__container{ padding: 100px 0; }
     .ground-sec{ padding: 0 50px; background: #fff; }
-    .ground-sec .ground__content .ground__content--title{ font-size: 62px; }
+    .ground-sec .ground__content .ground__content--title{ font-size: 52px; }
     .ground-sec .ground__content .ground__content--subtitle{ font-size: 14px; }
     .ground-sec .ground__content .ground__content--btn{ flex-direction: column; }
-
-
-
-
     .possibility-sec .slide__wrap .slide__last .graphic{
         width: calc(100vw - 100px);
         padding-left: 100px;
@@ -1183,6 +1171,6 @@
     .possibility-sec .possibility-bottom__text{
         width: 100%;
         padding: 10px;
-        background: #ccc;
     }
+    .footer__inner{ padding:0 20px; }
 }
