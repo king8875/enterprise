@@ -191,12 +191,11 @@
     font-weight: 700;
     font-size: 72px;
 }
-.gallery-content .gallery-img{
-    
+.gallery-content .gallery-img{   
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: 186px;
+    gap: 100px;
     padding: 100vh 0;
 }
 .gallery-content .gallery-img--item{
