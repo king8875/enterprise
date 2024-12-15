@@ -1026,17 +1026,24 @@
 
 /* footer__banner-sec */
 .footer__banner-sec{
-    overflow: hidden;
-    transform: translateY(100px);
-    width: 100%;
+    display: flex;
     z-index: -1;
-    transition: .5s;
+    transform: translateY(100%);
+    transition: all .7s;
 }
-.banner__inner{ display: flex; width: max-content; }
-.banner__inner .banner__item{ padding: 10px 72px; }
+.banner__inner{ 
+    display: flex;
+    width: 100%;
+    animation: marquee 15s linear infinite;
+}
+.banner__inner .banner__item{ 
+    padding: 10px 75px; 
+    white-space: nowrap;
+}
 .banner__inner .banner__item span{
+    display: inline-block;
+    width: 100%;
     font-size: 24px;
-    line-height: 1.67;
     font-weight: 600;
     color: #fff;
 }
@@ -1060,7 +1067,10 @@
 .foot__left{ font-size: 14px; color: #fff; }
 .foot__right img{ width: 193px; }
 
-
+@keyframes marquee {
+    0%{ transform: translateX(0%); }
+    100%{ transform: translateX(-100%); }
+}
 @media (max-width:768px) {
     .intro-text .intro-text-item { font-size: 40px; padding: 0; }
     .intro-text .intro-text-item:nth-child(4){ font-size: 28px; }
@@ -1157,11 +1167,11 @@
     }
     .prove-text{ font-size: 42px; }
 
-    .ground-sec .ground__container{ padding: 100px 0; }
-    .ground-sec{ padding: 0 50px; background: #fff; }
+    .ground-sec{ padding: 0 20px;  }
+    .ground-sec .ground__container{ padding: 40px 0; }
     .ground-sec .ground__content .ground__content--title{ font-size: 52px; }
     .ground-sec .ground__content .ground__content--subtitle{ font-size: 14px; }
-    .ground-sec .ground__content .ground__content--btn{ flex-direction: column; }
+    .ground-sec .ground__content .ground__content--btn{ flex-direction: column; gap: 10px; }
     .possibility-sec .slide__wrap .slide__last .graphic{
         width: calc(100vw - 100px);
         padding-left: 100px;
@@ -1171,5 +1181,6 @@
         width: 100%;
         padding: 10px;
     }
+    .footer__banner-sec{ display: none; }
     .footer__inner{ padding:0 20px; }
 }

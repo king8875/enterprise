@@ -224,26 +224,16 @@ gsap.to(".creater__slide-inner", {
     },
 });
 
-gsap.to(".banner__inner", {
-    xPercent: -100,
-    duration: 30,
-    ease: "linear",
-    repeat: -1,
-    modifiers: {
-        x: gsap.utils.wrap(-document.querySelector(".banner__inner").scrollWidth / 1, 0) 
-    }
-});
 
 const footbanner = gsap.timeline({
     scrollTrigger: {
         trigger: ".footer",
-        start: "100% 100%",
-        end: "100% 100%",
+        start: "90% 100%",
+        end: "90% 100%",
         scrub: true,
     }
 });
-
-footbanner.to('.footer__banner-sec', { y: 0, });
+footbanner.to('.footer__banner-sec', { y: 0,});
 
 
 let isAnimated = false;
