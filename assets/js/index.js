@@ -370,7 +370,7 @@ mm.add("(max-width: 768px)", () => {
         },
         xPercent:-100,
         x: function(){
-            return window.innerWidth - 220;
+            return window.innerWidth - 180;
         }
     });
 
@@ -394,7 +394,6 @@ mm.add("(max-width: 768px)", () => {
     });
     titleScroll.to(".icon-card-img",0.5, { autoAlpha:0 },'b-=1');
     titleScroll.to(".icon-card-img-active",0.5, { autoAlpha: 1 },'b-=0.7');
-
 
 
     //slide01 gsap

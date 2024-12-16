@@ -21,7 +21,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    padding: 0 32px;
     font-weight: 700;
     font-size: 52px;
     line-height: 1.35;
@@ -87,23 +86,17 @@
 
 .showcase-sec .showcase__main{
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     left: 50%;
     top: 50%;
-    width: 100%;
-    padding: 32px;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 1.67;
-    color: #fff;
+    padding: 0 10px;
     transform: translate(-50%,-50%);
     opacity: 0;
 }
 .showcase-sec .showcase__main p{
-    display: flex;
-    flex-direction: column;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.67;
+    color: #fff;
 }
 
 
@@ -180,7 +173,7 @@
 
 /* gallery-sec */
 .gallery-container{ position: relative; }
-.gallery-content{ display: flex; height: 300vh;}
+.gallery-content{ display: flex; height: 300vh; padding: 0 10px;}
 .gallery-content .gallery-title{
     position: sticky;
     top: 0;
@@ -1071,14 +1064,16 @@
     0%{ transform: translateX(0%); }
     100%{ transform: translateX(-100%); }
 }
+@media (min-width:769px) {
+    .service__content--title .pc-br{ display: block; }    
+}
 @media (max-width:768px) {
-    .intro-text .intro-text-item { font-size: 40px; padding: 0; }
+    .intro-text .intro-text-item { font-size: 25px; padding: 0; }
     .intro-text .intro-text-item:nth-child(4){ font-size: 28px; }
 
 
     .showcase-sec .showcase__intro--inner{ font-size: 40px; }
-
-    .showcase-sec .showcase__main{ font-size: 20px; }
+    .showcase-sec .showcase__main p{ font-size: 20px; }
     .feature-sec .feature__title{ font-size: 30px; }
     .challenge-sec .left{ 
         text-align: center;
@@ -1091,11 +1086,8 @@
         justify-content: center;
     }
   
-    .gallery-content .gallery-img{
-        position: absolute;
-        top: 0;
-    }
-    .gallery-content .gallery-title{ font-size: 32px; }
+    .gallery-content .gallery-img{ position: absolute; top: 0; }
+    .gallery-content .gallery-title{ font-size: 32px; z-index: 10; }
     .service__container{ display: flex; flex-direction: column; }
     .service-sec .service-wrapper{ padding: 0 }
     #serviceArea2 .service__main--title { display: none; }
@@ -1172,6 +1164,12 @@
     .ground-sec .ground__content .ground__content--title{ font-size: 52px; }
     .ground-sec .ground__content .ground__content--subtitle{ font-size: 14px; }
     .ground-sec .ground__content .ground__content--btn{ flex-direction: column; gap: 10px; }
+    /* possibility css */
+    .possibility-sec .slide__wrap{
+        position: relative;
+        width: 100%;
+        padding: 0 50px;
+    }
     .possibility-sec .slide__wrap .slide__last .graphic{
         width: calc(100vw - 100px);
         padding-left: 100px;
