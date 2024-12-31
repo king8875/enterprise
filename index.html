@@ -15,6 +15,8 @@
     <!-- gsap -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
     <!-- swiper script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- lenis -->
@@ -87,7 +89,10 @@
     </header>
 
     <main id="container">
-        
+        <div class="ontop-block">
+            <img src="./assets/images/top_ic.svg" alt="상단으로가는 버튼">
+        </div>
+
         <section class="intro-sec">
             <h1 class="blind">인트로</h1>
             <div class="sticky">
@@ -101,8 +106,8 @@
                     </div>
                     <div class="intro-text-item">
                         <p>
-                            이용자 개인이 데이터 소유권을갖고<br>
-                            언제 어디서든 나를 증명하는<br>
+                            이용자 개인이<br class="mobile"> 데이터 소유권을갖고<br>
+                            언제 어디서든<br class="mobile"> 나를 증명하는<br>
                             데이터 패스포트이자<br>
                         </p>
                     </div>
@@ -150,8 +155,8 @@
                 </div>
                 <div class="showcase__main">
                     <p>
-                        엔터프라이즈블록체인은 블록체인 네트워크<br>
-                        DATA ID를 활용해 그 문제를 해결하고 새로운 방식을<br>
+                        엔터프라이즈블록체인은 블록체인 네트워크
+                        DATA ID를 활용해 그 문제를 해결하고 새로운 방식을
                         제안하고자 합니다.
                     </p>
                 </div>
@@ -439,7 +444,7 @@
                             <div class="service__content">
                                 <div class="service__content--title">
                                     더 나은 일거리와 재능 거래,
-                                    금융 서비스 이용까지.<br class="pc-br">
+                                    금융 서비스 이용까지.
                                     모든 게 가능해져요.
                                 </div>
                                 <div class="service__content--content">
@@ -519,73 +524,82 @@
                                         </div>
                                     </li>
                                     <li class="slide03__item card__item">
-                                        <img src="./assets/images/card_img05.png" alt="">
-                                        <div class="card__head">
-                                            <div class="card__head--title">
-                                                <p>CREATOR</p>
-                                                <span>****</span>
-                                            </div>
-
+                                        <div class="card__item--img--block">
+                                            <img src="./assets/images/card_img05.png" alt="">
                                         </div>
-                                        <div class="card__body">
-                                            <p class="card__body--title">
-                                                크리에이터들이 만들어 낸 다양한 창작물과 재능을 자산화, 토큰화 할 수 있는 기반을 만들어요.
-                                            </p>
-                                        </div>
-                                        <div class="card__bottom">
-                                            <div class="card__bottom--profile">
-                                                <div class="profile"></div>
-                                                <div class="profile__name">
-                                                    <p>model_top</p>
+                                        <div class="card__item--content--block">
+                                            <div class="card__head">
+                                                <div class="card__head--title">
+                                                    <p>CREATOR</p>
+                                                    <span>****</span>
                                                 </div>
                                             </div>
-                                            <div class="card__bottom--icon"></div>
+                                            <div class="card__body">
+                                                <p class="card__body--title">
+                                                    크리에이터들이 만들어 낸 다양한 창작물과 재능을 자산화, 토큰화 할 수 있는 기반을 만들어요.
+                                                </p>
+                                            </div>
+                                            <div class="card__bottom">
+                                                <div class="card__bottom--profile">
+                                                    <div class="profile"></div>
+                                                    <div class="profile__name">
+                                                        <p>model_top</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card__bottom--icon"></div>
+                                            </div>
                                         </div>
                                     </li>
                                     <li class="slide03__item card__item">
-                                        <img src="./assets/images/card_img06.png" alt="">
-                                        <div class="card__head">
-                                            <div class="card__head--title">
-                                                <p>GIG WORKER</p>
-                                                <span>****</span>
-                                            </div>
-
+                                        <div class="card__item--img--block">
+                                            <img src="./assets/images/card_img06.png" alt="">
                                         </div>
-                                        <div class="card__body">
-                                            <p class="card__body--title">
-                                                블록체인 기반의 거래 구조 덕분에 긱 워커의 재능과 경력, 평판을 투명하게 거래하고 흩어진 이력을 관리할 수 있어요.                                        </p>
-                                        </div>
-                                        <div class="card__bottom">
-                                            <div class="card__bottom--profile">
-                                                <div class="profile"></div>
-                                                <div class="profile__name">
-                                                    <p>elon.M</p>
+                                        <div class="card__item--content--block">
+                                            <div class="card__head">
+                                                <div class="card__head--title">
+                                                    <p>GIG WORKER</p>
+                                                    <span>****</span>
                                                 </div>
                                             </div>
-                                            <div class="card__bottom--icon"></div>
+                                            <div class="card__body">
+                                                <p class="card__body--title">
+                                                    블록체인 기반의 거래 구조 덕분에 긱 워커의 재능과 경력, 평판을 투명하게 거래하고 흩어진 이력을 관리할 수 있어요.                                        </p>
+                                            </div>
+                                            <div class="card__bottom">
+                                                <div class="card__bottom--profile">
+                                                    <div class="profile"></div>
+                                                    <div class="profile__name">
+                                                        <p>elon.M</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card__bottom--icon"></div>
+                                            </div>
                                         </div>
                                     </li>
                                     <li class="slide03__item card__item">
-                                        <img src="./assets/images/card_img07.png" alt="">
-                                        <div class="card__head">
-                                            <div class="card__head--title">
-                                                <p>SELF EMPLOYED</p>
-                                                <span>****</span>
-                                            </div>
-
+                                        <div class="card__item--img--block">
+                                            <img src="./assets/images/card_img07.png" alt="">
                                         </div>
-                                        <div class="card__body">
-                                            <p class="card__body--title">
-                                                개인사업자의 소득과 거래 이력, 경험과 전문성을 쉽게 증명할 수 있어서 금융 상품을 이용하기도 더 쉬워져요.                                        </p>
-                                        </div>
-                                        <div class="card__bottom">
-                                            <div class="card__bottom--profile">
-                                                <div class="profile"></div>
-                                                <div class="profile__name">
-                                                    <p>cafe22</p>
+                                        <div class="card__item--content--block">
+                                            <div class="card__head">
+                                                <div class="card__head--title">
+                                                    <p>SELF EMPLOYED</p>
+                                                    <span>****</span>
                                                 </div>
                                             </div>
-                                            <div class="card__bottom--icon"></div>
+                                            <div class="card__body">
+                                                <p class="card__body--title">
+                                                    개인사업자의 소득과 거래 이력, 경험과 전문성을 쉽게 증명할 수 있어서 금융 상품을 이용하기도 더 쉬워져요.                                        </p>
+                                            </div>
+                                            <div class="card__bottom">
+                                                <div class="card__bottom--profile">
+                                                    <div class="profile"></div>
+                                                    <div class="profile__name">
+                                                        <p>cafe22</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card__bottom--icon"></div>
+                                            </div>
                                         </div>
                                     </li>
                                 </ul>
@@ -792,23 +806,25 @@
                             <ul class="creater__body-list">
                                 <li class="creater__body-item">
                                     <img src="./assets/images/card_img04.png">
-                                    <div class="creater__item-head">
-                                        <p>CHOI</p>
-                                        <p>SORA</p>
-                                    </div>
-                                    <div class="creater__item-body">
-                                        <p>베이커리 레시피를 창작하고 유튜브와
-                                            쿠킹 클래스를 운영하는 크리에이터 최소라 님은
-                                            쿠킹 클래스 수강 이력, 레시피 사용 이력을
-                                            DATA ID에 기록해 관리하고 있어요.</p>
-                                    </div>
-                                    <div class="creater__item-info">
-                                        <div class="creater-info-main">
-                                            <div class="profile-img"></div>
-                                            <span class="profile-name">baker_sora</span>
+                                    <div class="creater__card--block">
+                                        <div class="creater__item-head">
+                                            <p>CHOI</p>
+                                            <p>SORA</p>
                                         </div>
-                                        <div class="card__item-info">
-                                            <span><span class="blind">card-icon01</span></span>
+                                        <div class="creater__item-body">
+                                            <p>베이커리 레시피를 창작하고 유튜브와
+                                                쿠킹 클래스를 운영하는 크리에이터 최소라 님은
+                                                쿠킹 클래스 수강 이력, 레시피 사용 이력을
+                                                DATA ID에 기록해 관리하고 있어요.</p>
+                                        </div>
+                                        <div class="creater__item-info">
+                                            <div class="creater-info-main">
+                                                <div class="profile-img"></div>
+                                                <span class="profile-name">baker_sora</span>
+                                            </div>
+                                            <div class="card__item-info">
+                                                <span><span class="blind">card-icon01</span></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
