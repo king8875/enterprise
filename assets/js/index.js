@@ -55,7 +55,6 @@ intro.to($('.intro-text-item')[2],{opacity:1})
 intro.to($('.intro-text-item')[2],{opacity:0})
 intro.to($('.intro-text-item')[3],{opacity:1});
 
-
 //showcase gsap
 const showcase = gsap.timeline({
     scrollTrigger: {
@@ -75,8 +74,6 @@ showcase.to($('.showcase-sec .showcase__img .img')[2], { height: 0, })
 showcase.to($('.showcase-sec .showcase__img .img')[1], { height: 0, })
 showcase.to('.dimmed', { autoAlpha: 1})
 showcase.to('.showcase__main', { opacity: 1, },"<")
-
-
 
 ScrollTrigger.create({
     trigger: ".challenge-sec",
@@ -109,8 +106,6 @@ ScrollTrigger.create({
         className:"dark"
     },
 });
-
-
 
 // feature gsap
 const tl5 = gsap.timeline({
@@ -158,7 +153,6 @@ titleScroll.to(".ser__body .card__item",1, {
 });
 titleScroll.to(".icon-card-img",0.5, { autoAlpha:0 },'b-=1');
 titleScroll.to (".icon-card-img-active",0.5, { autoAlpha: 1 },'b-=0.7');
-// titleScroll.to (".icon-card-img-active",0.5, { autoAlpha: 0 },'b-=0.01');
 
 // sevicearea2 js
 gsap.set('#serviceArea2 .service__main--title',{autoAlpha:0});
@@ -177,11 +171,6 @@ ScrollTrigger.create({
         gsap.set('#serviceArea2 .service__main--title',{autoAlpha:0})
     }
 });
-
-
-
-
-
 
 ScrollTrigger.create({
     trigger: ".challenge-sec.v3",
@@ -206,9 +195,6 @@ const tl6 = gsap.timeline({
 tl6.from('.prove-sec02 .prove-text',{x:0})
 tl6.from('.prove-sec02 .pr-block',{'--x':1},"<")
 
-
-
-
 const slide01 = gsap.timeline({
     scrollTrigger:{
         trigger:'.slide01',
@@ -221,8 +207,6 @@ slide01.set('.down__title span:nth-child(2)',{opacity:0});
 slide01.to('.down__title span:nth-child(1)',{opacity:0});
 slide01.to('.down__title span:nth-child(2)',{opacity:1});
 
-
-
 const creater = gsap.timeline({
     scrollTrigger: {
         trigger: ".creater-sec",
@@ -233,22 +217,6 @@ const creater = gsap.timeline({
 });
 creater.to('.creater__intro', { opacity: 1, })
 
-gsap.to(".creater__slide-inner", {
-
-    scrollTrigger: {
-        trigger: ".creater__slide",
-        start: "0% 0%",
-        end:"100% 100%",
-        scrub: 0,
-        invalidateOnRefresh:true,
-    },
-    xPercent:-100,
-    x:function(){
-        return (window.innerWidth - 160 );
-    },
-});
-
-
 const footbanner = gsap.timeline({
     scrollTrigger: {
         trigger: ".footer",
@@ -257,8 +225,7 @@ const footbanner = gsap.timeline({
         scrub: true,
     }
 });
-footbanner.to('.footer__banner-sec', { y: 0,});
-
+footbanner.to('.footer__banner-sec', { y: 0});
 
 let isAnimated = false;
 gsap.set('.header__sidemenu',{autoAlpha:0});
@@ -301,10 +268,23 @@ $('.header__hamburger').on('click',function(){
 });
 
 
-
 const mm = gsap.matchMedia();
-
+// pc
 mm.add("(min-width: 769px)", function(){
+    gsap.to(".creater__slide-inner", {
+
+        scrollTrigger: {
+            trigger: ".creater__slide",
+            start: "0% 0%",
+            end:"100% 100%",
+            scrub: 0,
+            invalidateOnRefresh:true,
+        },
+        xPercent:-100,
+        x:function(){
+            return (window.innerWidth - 160 );
+        },
+    });
     //possibility gsap
     const titleScroll03 = gsap.timeline({
         scrollTrigger: {
@@ -370,9 +350,6 @@ mm.add("(min-width: 769px)", function(){
     });
 })
 
-
-
-
 //mobile
 mm.add("(max-width: 768px)", () => {
     gsap.set(".slide03__item.first_card",{display:"none"});
@@ -384,10 +361,7 @@ mm.add("(max-width: 768px)", () => {
             scrub: 0,
         },
     });
-    // mobileScroll03.to(".slide03__item", { yPercent: (index) => -110 * index,});
     mobileScroll03.to(".service__slide03-wrap .right", { opacity:1, });
-    // mobileScroll03.to(".slide03__item.first_card",{autoAlpha:1});
-
 
     //possibility gsap
     gsap.to(".possibility-sec .slider__inner", {
@@ -425,7 +399,6 @@ mm.add("(max-width: 768px)", () => {
     titleScroll.to(".icon-card-img",0.5, { autoAlpha:0 },'b-=1');
     titleScroll.to(".icon-card-img-active",0.5, { autoAlpha: 1 },'b-=0.7');
 
-
     //slide01 gsap
     gsap.to(".slide01 .slide01__inner", {
         scrollTrigger: {
@@ -440,11 +413,44 @@ mm.add("(max-width: 768px)", () => {
             },
         },
         xPercent:0,
-       
+    });
+
+    // creater slide
+    gsap.to(".creater__slide-inner", {
+
+        scrollTrigger: {
+            trigger: ".creater__slide",
+            start: "0% 0%",
+            end:"100% 100%",
+            scrub: 0,
+            invalidateOnRefresh:true,
+        },
+        xPercent:-100,
+        x:function(){
+            return (window.innerWidth - 160 );
+        },
     });
 });
 
+// small mobile
 mm.add("(max-width: 400px)", () => {
+
+    //possibility gsap
+    gsap.to(".possibility-sec .slider__inner", {
+        scrollTrigger: {
+            trigger: ".possibility-sec",
+            start: "0% 0%",
+            end:"100% 100%",
+            scrub: true,
+            invalidateOnRefresh:true,
+        },
+        xPercent:-100,
+        x: function(){
+            return window.innerWidth - 190;
+        }
+    });
+
+    // serviceArea1
     const titleScroll = gsap.timeline({
         scrollTrigger: {
             trigger: "#serviceArea1", 
@@ -466,4 +472,39 @@ mm.add("(max-width: 400px)", () => {
     titleScroll.to(".icon-card-img",0.5, { autoAlpha:0 },'b-=1');
     titleScroll.to(".icon-card-img-active",0.5, { autoAlpha: 1 },'b-=0.7');
 
+    // slide01 
+    const slide01 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".slide01__wrap .slide01__bottom",
+            start:"50% 50%",
+            end:"100% 100%",
+            scrub:1,
+        }
+    })
+    slide01.to('.slide01__wrap .slide01__bottom',{ autoAlpha:1 });
+
+    // creater slide
+    gsap.to(".creater__slide-inner", {
+        scrollTrigger: {
+            trigger: ".creater__slide",
+            start: "0% 0%",
+            end:"100% 100%",
+            scrub: 0,
+            invalidateOnRefresh:true,
+        },
+        xPercent:0,
+    });
+    gsap.to(".creater__body", {
+        scrollTrigger: {
+            trigger: ".creater__slide",
+            start: "0% 0%",
+            end:"100% 100%",
+            scrub: 1,
+            invalidateOnRefresh:true,
+        },
+        xPercent:-100,
+        x:function(){
+            return (window.innerWidth - 20 );
+        },
+    });
 });

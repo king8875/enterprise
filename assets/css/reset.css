@@ -37,7 +37,7 @@ table {border-collapse:collapse;border-spacing:0}
 ul{list-style: none;}
 fieldset,input{border: 0;}
 img, picture, video, canvas, svg {display: block;max-width:100%;object-fit: cover;}
-
+em{ font-style: italic; }
 
 body{
     font-family: 'Archivo', 'NotoSansCJKkr';
