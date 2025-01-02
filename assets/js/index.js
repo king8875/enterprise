@@ -351,7 +351,7 @@ mm.add("(min-width: 769px)", function(){
 })
 
 //mobile
-mm.add("(max-width: 768px)", () => {
+mm.add("(min-width:401px) and (max-width: 768px)", () => {
     gsap.set(".slide03__item.first_card",{display:"none"});
     const mobileScroll03 = gsap.timeline({
         scrollTrigger: {
