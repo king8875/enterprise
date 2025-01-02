@@ -132,27 +132,6 @@ const tl5_1 = gsap.timeline({
 });
 tl5_1.to('.feature__title', { opacity: 1, });
 
-// sevicearea1 js
-const titleScroll = gsap.timeline({
-    scrollTrigger: {
-        trigger: "#serviceArea1", 
-        start: "0% 0%",
-        end:"100% 100%",
-        scrub: 1,  
-        invalidateOnRefresh:true,
-    },
-});
-titleScroll.to("#serviceArea1 .sticky-content", {
-    x: function(){
-        return -(document.querySelector("#serviceArea1 .ser__head").scrollWidth);
-    },
-});
-titleScroll.to(".ser__body .card__item",1, {
-    xPercent: (index) => -100 * index,  
-    x:(index) => -40 * index,
-});
-titleScroll.to(".icon-card-img",0.5, { autoAlpha:0 },'b-=1');
-titleScroll.to (".icon-card-img-active",0.5, { autoAlpha: 1 },'b-=0.7');
 
 // sevicearea2 js
 gsap.set('#serviceArea2 .service__main--title',{autoAlpha:0});
@@ -271,6 +250,28 @@ $('.header__hamburger').on('click',function(){
 const mm = gsap.matchMedia();
 // pc
 mm.add("(min-width: 769px)", function(){
+    // sevicearea1 js
+    const titleScroll = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#serviceArea1", 
+            start: "0% 0%",
+            end:"100% 100%",
+            scrub: 1,  
+            invalidateOnRefresh:true,
+        },
+    });
+    titleScroll.to("#serviceArea1 .sticky-content", {
+        x: function(){
+            return -(document.querySelector("#serviceArea1 .ser__head").scrollWidth);
+        },
+    });
+    titleScroll.to(".ser__body .card__item",1, {
+        xPercent: (index) => -100 * index,  
+        x:(index) => -40 * index,
+    });
+    titleScroll.to(".icon-card-img",0.5, { autoAlpha:0 },'b-=1');
+    titleScroll.to (".icon-card-img-active",0.5, { autoAlpha: 1 },'b-=0.7');
+
     gsap.to(".creater__slide-inner", {
 
         scrollTrigger: {
@@ -458,11 +459,6 @@ mm.add("(max-width: 400px)", () => {
             end:"100% 100%",
             scrub: 1,  
             invalidateOnRefresh:true,
-        },
-    });
-    titleScroll.to("#serviceArea1 .sticky-content", {
-        x: function(){
-            return -(document.querySelector("#serviceArea1 .ser__head").scrollWidth - 200 );
         },
     });
     titleScroll.to(".ser__body .card__item",1, {
