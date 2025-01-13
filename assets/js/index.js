@@ -465,8 +465,8 @@ mm.add("(max-width: 400px)", () => {
         xPercent: (index) => -100 * index,  
         x:(index) => -10 * index,
     });
-    titleScroll.to(".icon-card-img",0.5, { autoAlpha:0 },'b-=1');
-    titleScroll.to(".icon-card-img-active",0.5, { autoAlpha: 1 },'b-=0.7');
+    titleScroll.to(".icon-card-img",1, { autoAlpha:0 },'b-=1');
+    titleScroll.to(".icon-card-img-active",1, { autoAlpha: 1 },'b-=0.7');
 
     // slide01 
     const slide01 = gsap.timeline({
